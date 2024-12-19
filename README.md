@@ -12,4 +12,4 @@ The source code of the site is located in the `ntno/mkdocs-terminal` repository 
 
 ## CI/CD
 
-The site is published via a GitHub Action workflow in the `ntno/mkdocs-terminal` repository.
+A [GitHub Action workflow](https://github.com/ntno/mkdocs-terminal/actions/workflows/pages-deploy-example-site.yml) in the `ntno/mkdocs-terminal` repository updates this site's static files in the [`gh-pages` branch](https://github.com/ntno/mkdocs-terminal-example-highlightjs/tree/gh-pages).
