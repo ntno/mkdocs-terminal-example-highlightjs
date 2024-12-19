@@ -10,7 +10,7 @@
     
     <meta name="author" content="ntno"> 
     
-    <link rel="canonical" href="https://ntno.github.io/mkdocs-terminal-example-highlightjs/languages/bash/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+    <link rel="canonical" href="https://ntno.github.io/mkdocs-terminal-example-highlightjs/sample-languages/python/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
 <link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
 <link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
@@ -20,7 +20,7 @@
 
     
  
-<title>Bash - Terminal Theme with Highlight.js</title>
+<title>Python - mkdocs-terminal theme with highlight.js</title>
 
 
 <link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
@@ -57,7 +57,7 @@
 
 
     
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/default.min.css" rel="stylesheet">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/default.min.css" rel="stylesheet">  
     
     
 
@@ -66,13 +66,13 @@
     
     
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/highlight.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/bash.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/javascript.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/python.min.js"></script>
     
     <script src="../../highlight.js"></script>
     
@@ -83,7 +83,7 @@
 <body class="terminal"><div class="container">
     <div class="terminal-nav">
         <header class="terminal-logo">
-            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://ntno.github.io/mkdocs-terminal-example-highlightjs/" class="no-style">Terminal Theme with Highlight.js</a></div>
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://ntno.github.io/mkdocs-terminal-example-highlightjs/" class="no-style">mkdocs-terminal theme with highlight.js</a></div>
         </header>
         
         <nav class="terminal-menu">
@@ -93,7 +93,7 @@
                 
                 <li property="itemListElement" typeof="ListItem">
                     <a href="../.." class="menu-item " property="item" typeof="WebPage">
-                        <span property="name">Home</span>
+                        <span property="name">Configuration</span>
                     </a>
                     <meta property="position" content="0">
                 </li>
@@ -126,7 +126,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../..">Home</a>
+    terminal-mkdocs-side-nav-item" href="../..">Configuration</a>
         
     
     
@@ -174,9 +174,11 @@
                 <li class="terminal-mkdocs-side-nav-li-ul-li">
     
         
-        <span class="
+        
+            <a class="
 
-    terminal-mkdocs-side-nav-item--active">Bash</span>
+    terminal-mkdocs-side-nav-item" href="../bash/">Bash</a>
+        
     
     </li>
             
@@ -191,11 +193,9 @@
                 <li class="terminal-mkdocs-side-nav-li-ul-li">
     
         
-        
-            <a class="
+        <span class="
 
-    terminal-mkdocs-side-nav-item" href="../python/">Python</a>
-        
+    terminal-mkdocs-side-nav-item--active">Python</span>
     
     </li>
             
@@ -226,12 +226,6 @@
         
     </ul>
   
-</nav><hr>
-<nav>
-    <ul>
-        <li><a href="#bash">Bash</a></li>
-        
-    </ul>
 </nav>
 </aside>
             <main id="terminal-mkdocs-main-content">
@@ -242,18 +236,25 @@
     
 
 <section id="mkdocs-terminal-content">
-    <h1 id="bash">Bash</h1>
-<p>Here's a sample bash script:</p>
-<pre><code class="language-bash">#!/bin/bash
-echo &quot;Today is &quot; `date`
+    <h1 id="python">Python<a class="headerlink" href="#python" title="Anchor link to this section for reference">#</a></h1>
+<p>Python language highlighting with <code>highlight.js</code>:</p>
+<pre><code class="language-python"># calculate factorial of n
+def fact(n):
 
-echo -e &quot;\nenter the path to a directory&quot;
-read the_path
+    # no work required
+    if n == 1 or n == 0:
+        return 1
 
-echo -e &quot;\nthis path has the following files and folders: &quot;
-ls $the_path
+    # minimum amount of work
+    return n * fact(n - 1)
+
+n = 5
+
+# calculate factorial
+factorial = fact(n)
+print(f&quot;{n}! = {factorial}&quot;)
 </code></pre>
-<p>Script adapted from Zaira Hira's <a href="https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/">"Bash Scripting Tutorial Linux Shell Script and Command Line For Beginners"</a></p>
+<p>Script adapted from Palistha Singh's <a href="https://www.freecodecamp.org/news/what-is-recursion/">"How Does Recursion Work? Explained with Code Examples"</a></p>
 </section>
 
 <section id="mkdocs-terminal-after-content">
@@ -264,7 +265,7 @@ ls $the_path
 <aside>
     <p>
         <small>
-            <i>Page last updated 2024-12-17. See revision history on <a href="https://github.com/ntno/mkdocs-terminal/commits/main/tests/examples/highlightjs/docs/languages/bash.md">GitHub</a>.</i>
+            <i>Page last updated 2024-12-18. See revision history on <a href="https://github.com/ntno/mkdocs-terminal/commits/main/tests/examples/highlightjs/docs/sample-languages/python.md">GitHub</a>.</i>
         </small>
     </p>
 </aside>
@@ -277,6 +278,13 @@ ls $the_path
             
             <p class="text-center text-muted">Copyright 2024 Natan Organick, All rights reserved</p>
              Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+        <div id="terminal-mkdocs-footer-prev-next">
+            <nav class="btn-group">
+                <a href="../bash/" title="Bash">Previous</a>
+                |
+                <a href="../javascript/" title="Javascript">Next</a>
+            </nav>
         </div>
     </div>
 </footer>
