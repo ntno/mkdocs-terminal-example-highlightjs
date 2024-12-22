@@ -10,7 +10,7 @@
     
     <meta name="author" content="ntno"> 
     
-    <link rel="canonical" href="https://ntno.github.io/mkdocs-terminal-example-highlightjs/sample-languages/bash/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+    <link rel="canonical" href="https://ntno.github.io/mkdocs-terminal-example-highlightjs/sample-languages/javascript-base/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
 <link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
 <link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
@@ -20,7 +20,7 @@
 
     
  
-<title>Bash - mkdocs-terminal theme with highlight.js</title>
+<title>Javascript - mkdocs-terminal theme with highlight.js</title>
 
 
 <link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
@@ -162,13 +162,17 @@
             
     
         
-        <span class="
+        
+            
+            
+            <span class="
         
             
         
     
 
-    terminal-mkdocs-side-nav-item--active terminal-mkdocs-side-nav-section-no-index">Languages</span>
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Languages</span>
+        
     
     
         
@@ -186,9 +190,11 @@
                 <li class="terminal-mkdocs-side-nav-li-ul-li">
     
         
-        <span class="
+        
+            <a class="
 
-    terminal-mkdocs-side-nav-item--active">Bash</span>
+    terminal-mkdocs-side-nav-item" href="../bash/">Bash</a>
+        
     
     </li>
             
@@ -248,31 +254,23 @@
 </aside>
             <main id="terminal-mkdocs-main-content">
 <section id="mkdocs-terminal-content">
-    <h1 id="bash">Bash<a class="headerlink" href="#bash" title="Anchor link to this section for reference">#</a></h1>
+    <h1 id="javascript">Javascript<a class="headerlink" href="#javascript" title="Anchor link to this section for reference">#</a></h1>
 <h2 id="block-highlighting">Block Highlighting<a class="headerlink" href="#block-highlighting" title="Anchor link to this section for reference">#</a></h2>
 <p>Language highlighting can be enabled with <code>highlight.js</code> by adding a <a href="https://highlightjs.readthedocs.io/en/latest/supported-languages.html">supported programming language</a> name directly after the first <code>```</code> grouping in a Markdown code block:</p>
-<pre><code class="language-bash">#!/bin/bash
-echo &quot;Today is &quot; $(date)
-
-echo -e &quot;\nenter the path to a directory&quot;
-read the_path
-
-echo -e &quot;\nfiles and folders: &quot;
-ls $the_path
+<pre><code class="language-javascript">let score1 = 2;
+let score2 = 5;
+let averageScore = (score1 + score2) / 2.0
+console.log(averageScore)
 </code></pre>
 <h3 id="block-markdown">Block Markdown<a class="headerlink" href="#block-markdown" title="Anchor link to this section for reference">#</a></h3>
-<pre><code class="language-text">```bash
-#!/bin/bash
-echo &quot;Today is &quot; $(date)
-
-echo -e &quot;\nenter the path to a directory&quot;
-read the_path
-
-echo -e &quot;\nfiles and folders: &quot;
-ls $the_path
+<pre><code class="language-text">```javascript
+let score1 = 2;
+let score2 = 5;
+let averageScore = (score1 + score2) / 2.0
+console.log(averageScore)
 ```
 </code></pre>
-<p>Script adapted from Zaira Hira's <a href="https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/">"Bash Scripting Tutorial Linux Shell Script and Command Line For Beginners"</a></p>
+<p>Script adapted from Austin Asoluka's <a href="https://www.freecodecamp.org/news/how-to-use-variables-and-data-types-in-javascript/">"How to Use Variables and Data Types in JavaScript – Explained With Code Examples"</a></p>
 </section>
 
             </main>
@@ -283,13 +281,6 @@ ls $the_path
             
             <p class="text-center text-muted">Copyright 2024 Natan Organick, All rights reserved</p>
              Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
-        </div>
-        <div id="terminal-mkdocs-footer-prev-next">
-            <nav class="btn-group">
-                <a href="../.." title="Configuration">Previous</a>
-                |
-                <a href="../python/" title="Python">Next</a>
-            </nav>
         </div>
     </div>
 </footer>

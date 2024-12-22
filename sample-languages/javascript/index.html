@@ -62,6 +62,16 @@
     
 
     
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
     
     
     
@@ -75,6 +85,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/python.min.js"></script>
     
     <script src="../../highlight.js"></script>
+    
+    <script src="../../search/main.js"></script>
     
 
     
@@ -226,39 +238,35 @@
         
     </ul>
   
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#block-highlighting">Block Highlighting</a></li>
+        <li><a href="#block-markdown">Block Markdown</a></li>
+    </ul>
 </nav>
 </aside>
             <main id="terminal-mkdocs-main-content">
-    
-    
-    
-    
-    
-
 <section id="mkdocs-terminal-content">
     <h1 id="javascript">Javascript<a class="headerlink" href="#javascript" title="Anchor link to this section for reference">#</a></h1>
-<p>Javascript language highlighting with <code>highlight.js</code>:</p>
+<h2 id="block-highlighting">Block Highlighting<a class="headerlink" href="#block-highlighting" title="Anchor link to this section for reference">#</a></h2>
+<p>Language highlighting can be enabled with <code>highlight.js</code> by adding a <a href="https://highlightjs.readthedocs.io/en/latest/supported-languages.html">supported programming language</a> name directly after the first <code>```</code> grouping in a Markdown code block:</p>
 <pre><code class="language-javascript">let score1 = 2;
 let score2 = 5;
 let averageScore = (score1 + score2) / 2.0
 console.log(averageScore)
 </code></pre>
+<h3 id="block-markdown">Block Markdown<a class="headerlink" href="#block-markdown" title="Anchor link to this section for reference">#</a></h3>
+<pre><code class="language-text">```javascript
+let score1 = 2;
+let score2 = 5;
+let averageScore = (score1 + score2) / 2.0
+console.log(averageScore)
+```
+</code></pre>
 <p>Script adapted from Austin Asoluka's <a href="https://www.freecodecamp.org/news/how-to-use-variables-and-data-types-in-javascript/">"How to Use Variables and Data Types in JavaScript – Explained With Code Examples"</a></p>
 </section>
 
-<section id="mkdocs-terminal-after-content">
-    
-</section>
-<section id="mkdocs-terminal-revision">
-<br>
-<aside>
-    <p>
-        <small>
-            <i>Page last updated 2024-12-18. See revision history on <a href="https://github.com/ntno/mkdocs-terminal/commits/main/tests/examples/highlightjs/docs/sample-languages/javascript.md">GitHub</a>.</i>
-        </small>
-    </p>
-</aside>
-</section>
             </main>
         </div>
         <hr><footer>
@@ -279,6 +287,27 @@ console.log(averageScore)
     </div>
 
     
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
     
     
 </body>
