@@ -10,7 +10,7 @@
     
     <meta name="author" content="ntno"> 
     
-    <link rel="canonical" href="https://ntno.github.io/mkdocs-terminal-example-highlightjs/sample-languages/bash/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+    <link rel="canonical" href="https://ntno.github.io/mkdocs-terminal-example-highlightjs/sample-languages/cobol/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
 <link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
 <link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
@@ -20,7 +20,7 @@
 
     
  
-<title>Bash - mkdocs-terminal theme with highlight.js</title>
+<title>Cobol - mkdocs-terminal theme with highlight.js</title>
 
 
 <link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
@@ -182,9 +182,11 @@
                 <li class="terminal-mkdocs-side-nav-li-ul-li">
     
         
-        <span class="
+        
+            <a class="
 
-    terminal-mkdocs-side-nav-item--active">Bash</span>
+    terminal-mkdocs-side-nav-item" href="../bash/">Bash</a>
+        
     
     </li>
             
@@ -199,11 +201,9 @@
                 <li class="terminal-mkdocs-side-nav-li-ul-li">
     
         
-        
-            <a class="
+        <span class="
 
-    terminal-mkdocs-side-nav-item" href="../cobol/">Cobol</a>
-        
+    terminal-mkdocs-side-nav-item--active">Cobol</span>
     
     </li>
             
@@ -263,31 +263,35 @@
 </aside>
             <main id="terminal-mkdocs-main-content">
 <section id="mkdocs-terminal-content">
-    <h1 id="bash">Bash<a class="headerlink" href="#bash" title="Anchor link to this section for reference">#</a></h1>
+    <h1 id="cobol">Cobol<a class="headerlink" href="#cobol" title="Anchor link to this section for reference">#</a></h1>
 <h2 id="block-highlighting">Block Highlighting<a class="headerlink" href="#block-highlighting" title="Anchor link to this section for reference">#</a></h2>
 <p>Language highlighting can be enabled with Highlight.js by adding a <a href="https://highlightjs.readthedocs.io/en/latest/supported-languages.html">supported programming language</a> name directly after the first <code>```</code> grouping in a Markdown code block:</p>
-<pre><code class="language-bash">#!/bin/bash
-echo &quot;Today is &quot; $(date)
-
-echo -e &quot;\nenter the path to a directory&quot;
-read the_path
-
-echo -e &quot;\nfiles and folders: &quot;
-ls $the_path
+<pre><code class="language-cobol">            *&gt; setup the identification division
+            IDENTIFICATION DIVISION.
+            *&gt; setup the program id
+            PROGRAM-ID. HELLO.
+            *&gt; setup the procedure division
+            PROCEDURE DIVISION.
+              *&gt; print a string
+              DISPLAY 'HELLO WORLD'.
+            *&gt; end our program
+            STOP RUN.
 </code></pre>
 <h3 id="block-markdown">Block Markdown<a class="headerlink" href="#block-markdown" title="Anchor link to this section for reference">#</a></h3>
-<pre><code class="language-text">```bash
-#!/bin/bash
-echo &quot;Today is &quot; $(date)
-
-echo -e &quot;\nenter the path to a directory&quot;
-read the_path
-
-echo -e &quot;\nfiles and folders: &quot;
-ls $the_path
+<pre><code class="language-text">```cobol
+            *&gt; setup the identification division
+            IDENTIFICATION DIVISION.
+            *&gt; setup the program id
+            PROGRAM-ID. HELLO.
+            *&gt; setup the procedure division
+            PROCEDURE DIVISION.
+              *&gt; print a string
+              DISPLAY 'HELLO WORLD'.
+            *&gt; end our program
+            STOP RUN.
 ```
 </code></pre>
-<p>Script adapted from Zaira Hira's <a href="https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/">"Bash Scripting Tutorial Linux Shell Script and Command Line For Beginners"</a></p>
+<p>Script adapted from Yvan Scher's <a href="https://medium.com/@yvanscher/7-cobol-examples-with-explanations-ae1784b4d576">"7 cobol examples with explanations"</a></p>
 </section>
 
             </main>
@@ -301,9 +305,9 @@ ls $the_path
         </div>
         <div id="terminal-mkdocs-footer-prev-next">
             <nav class="btn-group">
-                <a href="../.." title="Configuration">Previous</a>
+                <a href="../bash/" title="Bash">Previous</a>
                 |
-                <a href="../cobol/" title="Cobol">Next</a>
+                <a href="../javascript/" title="Javascript">Next</a>
             </nav>
         </div>
     </div>

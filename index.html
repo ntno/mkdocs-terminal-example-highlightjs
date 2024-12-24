@@ -78,13 +78,9 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/highlight.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/bash.min.js"></script>
+    <script src="https://unpkg.com/highlightjs-cobol/dist/cobol.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/javascript.min.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/python.min.js"></script>
-    
-    <script src="highlight.js"></script>
+    <script src="add_hljs_highlight.js"></script>
     
     <script src="search/main.js"></script>
     
@@ -210,7 +206,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="sample-languages/python/">Python</a>
+    terminal-mkdocs-side-nav-item" href="sample-languages/cobol/">Cobol</a>
         
     
     </li>
@@ -234,6 +230,25 @@
     
     </li>
             
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="sample-languages/python/">Python</a>
+        
+    
+    </li>
+            
             
     </ul>
         
@@ -246,44 +261,66 @@
 <nav>
     <ul>
         <li><a href="#set-up">Set Up</a></li>
-        <li><a href="#add-highlightjs">Add highlight.js</a></li><li><a href="#add-custom-highlighter-code">Add Custom Highlighter Code</a></li>
+        <li><a href="#add-highlighter-code">Add Highlighter Code</a></li><li><a href="#add-highlightjs-library">Add Highlight.js Library</a></li>
     </ul>
 </nav>
 </aside>
             <main id="terminal-mkdocs-main-content">
 <section id="mkdocs-terminal-content">
-    <h1 id="mkdocs-terminal-with-highlightjs">mkdocs-terminal with highlight.js<a class="headerlink" href="#mkdocs-terminal-with-highlightjs" title="Anchor link to this section for reference">#</a></h1>
-<p>This example site uses the <a href="https://highlightjs.org/">highlight.js</a> javascript library to add code highlighting to a page after it is loaded in the user's web browser.</p>
-<p>Please review the <a href="https://highlightjs.readthedocs.io/en/latest/readme.html">highlight.js docs</a> for more information:</p>
+    <h1 id="mkdocs-terminal-with-highlightjs">mkdocs-terminal with Highlight.js<a class="headerlink" href="#mkdocs-terminal-with-highlightjs" title="Anchor link to this section for reference">#</a></h1>
+<p>This example site uses the <a href="https://highlightjs.org/">Highlight.js</a> javascript library to add code highlighting to a page after it is loaded in the user's web browser.</p>
+<p>Please review the <a href="https://highlightjs.readthedocs.io/en/latest/readme.html">Highlight.js docs</a> for more information:</p>
 <ul>
 <li><a href="https://highlightjs.readthedocs.io/en/latest/supported-languages.html">supported languages</a></li>
 <li><a href="https://highlightjs.org/examples">style options</a></li>
 <li><a href="https://cdnjs.com/libraries/highlight.js">get the latest files</a></li>
 </ul>
 <h2 id="set-up">Set Up<a class="headerlink" href="#set-up" title="Anchor link to this section for reference">#</a></h2>
-<h3 id="add-highlightjs">Add highlight.js<a class="headerlink" href="#add-highlightjs" title="Anchor link to this section for reference">#</a></h3>
-<p>Specify the <code>highlight.js</code> javascript and CSS source files.  At a minimum you will need to include the main script <code>highlight.min.js</code> and stylesheet <code>a11y-light.min.css</code>.  You should also specify language specific scripts as needed.</p>
-<p><code>mkdocs.yml</code> excerpt:</p>
-<pre><code class="language-yaml">theme:
-  name: terminal
-
-extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/highlight.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/bash.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/javascript.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/python.min.js
-  - highlight.js
-
-extra_css:
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/a11y-light.min.css
-</code></pre>
-<h3 id="add-custom-highlighter-code">Add Custom Highlighter Code<a class="headerlink" href="#add-custom-highlighter-code" title="Anchor link to this section for reference">#</a></h3>
-<p>Add a custom javascript file which will trigger the <code>highlight.js</code> library to highlight code blocks after an HTML page loads.  You can add the file to <code>docs/highlight.js</code> and reference it in the <code>extra_javascript</code> section of <code>mkdocs.yml</code>:</p>
+<h3 id="add-highlighter-code">Add Highlighter Code<a class="headerlink" href="#add-highlighter-code" title="Anchor link to this section for reference">#</a></h3>
+<p>Create a javascript file which will trigger the Highlight.js library to highlight code blocks.  </p>
+<p>Save the file in your MkDocs docs folder and reference it in the <code>extra_javascript</code> section of <code>mkdocs.yml</code>:</p>
 <pre><code class="language-javascript">window.addEventListener('load', hljs_highlight, false);
 
 function hljs_highlight() {
     hljs.highlightAll();
 }
+</code></pre>
+<p>For this example site the above javascript code is saved to <code>docs/add_hljs_highlight.js</code>.</p>
+<h3 id="add-highlightjs-library">Add Highlight.js Library<a class="headerlink" href="#add-highlightjs-library" title="Anchor link to this section for reference">#</a></h3>
+<h4 id="javascript-files">javascript files<a class="headerlink" href="#javascript-files" title="Anchor link to this section for reference">#</a></h4>
+<p>Add the Highlight.js javascript library file(s) to your <code>mkdocs.yml</code>:</p>
+<dl>
+<dt>highlight.min.js</dt>
+<dd><strong>Required.</strong> the core Highlight.js library logic and highlighting instructions for ~40 common programming languages
+<br>
+<br></dd>
+<dt>add_hljs_highlight.js</dt>
+<dd><strong>Required.</strong> a small script which uses the Highlight.js library to hilight code blocks once an HTML page is loaded in the browser (see <a href="./#add-highlighter-code">Add Highlighter Code</a>)
+<br>
+<br></dd>
+<dt>LANGUAGE.min.js</dt>
+<dd><strong>Optional.</strong> highlighting instructions for any language not included in the core library
+<br>
+<br></dd>
+</dl>
+<h4 id="css-files">CSS files<a class="headerlink" href="#css-files" title="Anchor link to this section for reference">#</a></h4>
+<p>Terminal for MkDocs comes with built-in CSS styling for Highlight.js.  This means that you don't have to specify an external stylesheet for code hilighting when you use Highlight.js.</p>
+<p>If you prefer one of the community Highlight.js <a href="https://highlightjs.org/examples">style options</a> you can specify it in the <code>extra_css</code> attribute in <code>mkdocs.yml</code>:</p>
+<pre><code class="language-yaml">extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/a11y-light.min.css
+</code></pre>
+<h4 id="mkdocsyml-example">mkdocs.yml example<a class="headerlink" href="#mkdocsyml-example" title="Anchor link to this section for reference">#</a></h4>
+<p>The following excerpt is used to configure code hilighting on this example site:</p>
+<pre><code class="language-yaml">theme:
+  name: terminal
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/highlight.min.js
+  - https://unpkg.com/highlightjs-cobol/dist/cobol.min.js
+  - add_hljs_highlight.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/a11y-light.min.css
 </code></pre>
 </section>
 

@@ -78,13 +78,9 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/highlight.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/bash.min.js"></script>
+    <script src="https://unpkg.com/highlightjs-cobol/dist/cobol.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/javascript.min.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/languages/python.min.js"></script>
-    
-    <script src="../../highlight.js"></script>
+    <script src="../../add_hljs_highlight.js"></script>
     
     <script src="../../search/main.js"></script>
     
@@ -212,7 +208,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../python/">Python</a>
+    terminal-mkdocs-side-nav-item" href="../cobol/">Cobol</a>
         
     
     </li>
@@ -232,6 +228,25 @@
             <a class="
 
     terminal-mkdocs-side-nav-item" href="../javascript/">Javascript</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../python/">Python</a>
         
     
     </li>
@@ -256,7 +271,7 @@
 <section id="mkdocs-terminal-content">
     <h1 id="javascript">Javascript<a class="headerlink" href="#javascript" title="Anchor link to this section for reference">#</a></h1>
 <h2 id="block-highlighting">Block Highlighting<a class="headerlink" href="#block-highlighting" title="Anchor link to this section for reference">#</a></h2>
-<p>Language highlighting can be enabled with <code>highlight.js</code> by adding a <a href="https://highlightjs.readthedocs.io/en/latest/supported-languages.html">supported programming language</a> name directly after the first <code>```</code> grouping in a Markdown code block:</p>
+<p>Language highlighting can be enabled with Highlight.js by adding a <a href="https://highlightjs.readthedocs.io/en/latest/supported-languages.html">supported programming language</a> name directly after the first <code>```</code> grouping in a Markdown code block:</p>
 <pre><code class="language-javascript">let score1 = 2;
 let score2 = 5;
 let averageScore = (score1 + score2) / 2.0
